@@ -1,0 +1,16 @@
+class Solution {
+  static int stray(int[] numbers) {
+    int n = numbers.length;
+    int unique = numbers[0];
+      for(int i = 1; i < n; i++){
+         if (numbers[i] - numbers[0] != 0) {
+           if( 2 * numbers[i] - numbers[1]- numbers[n - 1] != 0)
+             unique =  numbers[i];
+           else {
+             unique = numbers[0];
+           }
+         }
+      }
+      return unique;
+    }
+}
