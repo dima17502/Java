@@ -1,0 +1,12 @@
+public class timeConverter{
+  public static String toTime(int seconds){
+      return String.valueOf(seconds / 3600) + " hour(s) and "
+         + String.valueOf((seconds % 3600) / 60) + " minute(s)";
+  }
+}
+/* JAVA NOTE
+you can break code line before operators and start the new line from the indent like:
+return  "This is a multiple"
+		+ "line String";
+instead of + can be = or something else;
+*/
