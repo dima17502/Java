@@ -1,0 +1,22 @@
+import java.util.*;
+public class isogram {
+    public static boolean  isIsogram(String str) {
+        String lowered = str.toLowerCase();             
+        char[] ch = lowered.toCharArray();
+        Map<Character, Integer> freq = new HashMap<>();   
+        int n = lowered.length();
+        int i = 0;
+        if(n == 0)
+          return true;
+        while(i < n &&  freq.getOrDefault(ch[i],0) == 0){
+          freq.put(ch[i], freq.getOrDefault(ch[i],0) + 1);
+          ++i;
+        }
+        if (i < n)
+          return false;
+        else if(freq.getOrDefault(ch[n-1], 0) > 1)
+          return false;
+        else
+          return true;
+    } 
+}
